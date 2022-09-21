@@ -37,7 +37,7 @@ void print_data(const u_char* packet, uint16_t size)
 {
 	uint8_t i;
 	for(i=0;i<size;i++)
-		printf("%02x",*(packet+size));
+		printf("%02x",*(packet+i));
 	printf("\n");
 	return;
 }
@@ -76,7 +76,6 @@ void print_pcap(const u_char* packet,uint32_t total_size)
 	memcpy(&tcp_size,packet+ip_start+tcp_start-1+15,2);
 	tcp_size = ntohs(tcp_size);
 
-	printf("%u %u\n",data_start,tcp_size);
 	print_data(packet+ip_start+tcp_start+data_start-1,mymin(tcp_size-data_start,10));
 	printf("\n");
 	return ;
