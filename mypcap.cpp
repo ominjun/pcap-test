@@ -18,8 +18,8 @@ void print_ip(const u_char* print_array)
 {
 	int8_t i;
 	for(i=0;i<3;i++)
-		printf("%03d.",*(print_array+i));
-	printf("%03d\n",*(print_array+i));
+		printf("%d.",*(print_array+i));
+	printf("%d\n",*(print_array+i));
 	return;
 }
 void print_tcp(const u_char* print_array)
@@ -58,9 +58,9 @@ void print_pcap(const u_char* packet,uint32_t total_size)
 		return;
 
 	printf("mac src : ");
-	print_mac(packet);
-	printf("mac des : ");
 	print_mac(packet+6);
+	printf("mac des : ");
+	print_mac(packet);
 
 	printf("ip src : ");
 	print_ip(packet+ip_start-1+13);
