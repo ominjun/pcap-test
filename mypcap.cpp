@@ -41,7 +41,7 @@ void print_data(const u_char* packet, uint16_t size)
 	printf("\n");
 	return;
 }
-void print_pcap(const u_char* packet,uint32_t total_size)
+void print_pcap(const u_char* packet)
 {	
 	uint16_t check_upper_ip;
 	uint8_t check_upper_tcp;

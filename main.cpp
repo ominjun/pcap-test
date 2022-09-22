@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
 			printf("pcap_next_ex return %d(%s)\n", res, pcap_geterr(pcap));
 			break;
 		}
-		print_pcap(packet,header->caplen);
+		print_pcap(packet);
 	}
 
 	pcap_close(pcap);

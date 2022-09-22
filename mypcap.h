@@ -9,4 +9,4 @@ void print_ip(const u_char* print_array);
 void print_tcp(const u_char* print_array);
 uint16_t mymin(uint16_t a, uint16_t b);
 void print_data(const u_char* packet, uint16_t size);
-void print_pcap(const u_char* packet,uint32_t total_size);
+void print_pcap(const u_char* packet);
