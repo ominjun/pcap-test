@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <netinet/in.h>
 #include <string.h>
-#include "pcap.h"
+#include "mypcap.h"
 #define ip_start 14
 #define tcp_start 20
 
